@@ -21,6 +21,11 @@ jobs:
       with:
         submodules: true
 
+    - name: Update fromsoftware-rs
+      run: |
+        git -C fromsoftware-rs fetch origin erfps2
+        git -C fromsoftware-rs checkout 44a5603
+
     - name: Install DXC
       run: nuget install Microsoft.Direct3D.DXC -Version 1.8.2505.32
 
